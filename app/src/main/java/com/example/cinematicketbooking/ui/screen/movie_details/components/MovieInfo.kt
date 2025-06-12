@@ -22,6 +22,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.cinematicketbooking.ui.componants.GenreTags
 import com.example.cinematicketbooking.ui.theme.Avenir
 
 @Composable
@@ -69,7 +70,10 @@ fun MovieInfoCard(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        GenreTags(modifier = Modifier.padding(horizontal = horizontalPadding))
+        GenreTags(
+            listOf("Fantasy", "Adventure"),
+            modifier = Modifier.padding(horizontal = horizontalPadding)
+        )
 
         Spacer(modifier = Modifier.height(20.dp))
 

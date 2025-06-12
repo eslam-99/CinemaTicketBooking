@@ -1,4 +1,4 @@
-package com.example.cinematicketbooking.ui.screen.movie_details.components
+package com.example.cinematicketbooking.ui.componants
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -19,14 +19,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun GenreTags(modifier: Modifier = Modifier) {
+fun GenreTags(genres: List<String>, modifier: Modifier = Modifier) {
     Row(
         modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
     ) {
-        Chip("Fantasy")
-        Spacer(Modifier.width(8.dp))
-        Chip("Adventure")
+        genres.forEachIndexed { index, genre ->
+            Chip(genre)
+            if (index < genres.size - 1) {
+                Spacer(Modifier.width(8.dp))
+            }
+        }
     }
 }
 
