@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -20,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cinematicketbooking.R
+import com.example.cinematicketbooking.ui.componants.CloseButton
 import com.example.cinematicketbooking.ui.theme.Avenir
 
 @Composable
@@ -32,16 +32,7 @@ fun TopBarControls() {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(
-            painter = painterResource(R.drawable.close),
-            contentDescription = "Close",
-            tint = Color(0xFFFFFFFF),
-            modifier = Modifier
-                .size(40.dp)
-                .clip(CircleShape)
-                .background(Color(0xFF363636).copy(0.6f))
-                .padding(7.dp)
-        )
+        CloseButton()
         Row(
             modifier = Modifier
                 .clip(RoundedCornerShape(50.dp))

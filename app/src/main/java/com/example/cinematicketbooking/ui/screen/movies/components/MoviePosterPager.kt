@@ -21,7 +21,11 @@ import kotlin.math.absoluteValue
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun MoviePosterPager(movies: List<MovieUiModel>, pagerState: PagerState, modifier: Modifier = Modifier) {
+fun MoviePosterPager(
+    movies: List<MovieUiModel>,
+    pagerState: PagerState,
+    modifier: Modifier = Modifier
+) {
     HorizontalPager(
         state = pagerState,
         contentPadding = PaddingValues(horizontal = 67.dp),

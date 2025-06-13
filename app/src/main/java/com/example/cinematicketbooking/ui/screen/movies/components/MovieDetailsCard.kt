@@ -35,7 +35,11 @@ import com.example.cinematicketbooking.ui.theme.Avenir
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalAnimationApi::class)
 @Composable
-fun MovieDetailsCard(movies: List<MovieUiModel>, pagerState: PagerState, modifier: Modifier = Modifier) {
+fun MovieDetailsCard(
+    movies: List<MovieUiModel>,
+    pagerState: PagerState,
+    modifier: Modifier = Modifier
+) {
     val currentMovie = movies[pagerState.currentPage]
 
     Column(
